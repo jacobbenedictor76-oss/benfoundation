@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benefactor Foundation | Empowering Grassroots Talent</title>
+  <meta name="description" content="Benefactor Foundation empowers the coming generation of grassroots talents across sports, arts, technology, entrepreneurship and physical works through interactive sponsorship and support services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">B</span>
+        <span class="brand-text">BENEFACTOR<em>FOUNDATION</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#categories" data-i18n="nav.categories">Categories</a>
+        <a href="#talents" data-i18n="nav.talents">Talent Roster</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#impact" data-i18n="nav.impact">Impact</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langBtn" aria-label="Switch language / Badilisha lugha" title="Switch language">EN</button>
+        <a href="#sponsor" class="btn btn-primary nav-cta" data-i18n="nav.cta">Sponsor a Talent</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="tag" data-i18n="hero.tag">Foundation &middot; Est. to uplift the next generation</span>
+        <h1><span data-i18n="hero.title1">Empowering the coming generation of </span><span class="grad" data-i18n="hero.title2">grassroots talents</span></h1>
+        <p data-i18n="hero.p">
+          We discover, nurture and fund gifted young people from underserved communities &mdash;
+          across sports, arts, technology, entrepreneurship and physical works &mdash; so their
+          potential becomes their future.
+        </p>
+        <div class="hero-actions">
+          <a href="#sponsor" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Sponsor a Talent</a>
+          <a href="#talents" class="btn btn-ghost btn-lg" data-i18n="hero.cta2">Meet the Talents</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong data-count="240">0</strong><span data-i18n="hero.stat1">Talents empowered</span></div>
+          <div class="stat"><strong data-count="5">0</strong><span data-i18n="hero.stat2">Program categories</span></div>
+          <div class="stat"><strong data-count="32">0</strong><span data-i18n="hero.stat3">Partner communities</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-card art-card-1"><span class="art-emoji">&#9917;</span><p data-i18n="cats.sports">Sports</p></div>
+        <div class="art-card art-card-2"><span class="art-emoji">&#127912;</span><p data-i18n="cats.arts">Arts</p></div>
+        <div class="art-card art-card-3"><span class="art-emoji">&#128187;</span><p data-i18n="cats.tech">Technology</p></div>
+        <div class="art-card art-card-4"><span class="art-emoji">&#128200;</span><p data-i18n="cats.business">Entrepreneurship</p></div>
+        <div class="art-card art-card-5"><span class="art-emoji">&#128736;&#65039;</span><p data-i18n="cats.works">Physical Works</p></div>
+        <div class="art-ring"></div>
+      </div>
+    </div>
+
+    <div class="spotlight reveal">
+      <div class="spotlight-head">
+        <span class="tag" data-i18n="spot.tag">Talent spotlight</span>
+        <div class="spotlight-nav">
+          <button class="spot-btn" id="spotPrev" data-i18n-aria="spot.prev" aria-label="Previous talent">&#8592;</button>
+          <button class="spot-btn" id="spotNext" data-i18n-aria="spot.next" aria-label="Next talent">&#8594;</button>
+        </div>
+      </div>
+      <div class="spot-track" id="spotTrack"></div>
+      <div class="spot-dots" id="spotDots"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag" data-i18n="about.tag">Who we are</span>
+        <h2 data-i18n="about.title">Our Mission</h2>
+        <p data-i18n="about.subtitle">Grassroots talent often goes unnoticed. We change that.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n-html="about.p1">
+            <strong>Benefactor Foundation</strong> is a non-profit talent empowerment organisation dedicated to
+            discovering raw, grassroots ability and turning it into real opportunity. We believe talent is
+            evenly distributed, but opportunity is not &mdash; and our job is to level the playing field.
+          </p>
+          <p data-i18n-html="about.p2">
+            Through interactive sponsorship, mentorship and structured training, we fund the dreams of young
+            athletes, artists, builders, technologists and entrepreneurs from the ground up &mdash; providing the
+            tools, platforms and networks they need to succeed.
+          </p>
+        </div>
+        <div class="about-values">
+          <div class="value-card"><span>01</span><h4 data-i18n="about.v1">Discover</h4><p data-i18n="about.v1p">Community scouting to find raw talent where it lives.</p></div>
+          <div class="value-card"><span>02</span><h4 data-i18n="about.v2">Nurture</h4><p data-i18n="about.v2p">Coaching, materials and structured development plans.</p></div>
+          <div class="value-card"><span>03</span><h4 data-i18n="about.v3">Fund</h4><p data-i18n="about.v3p">Direct, transparent sponsorship from global benefactors.</p></div>
+          <div class="value-card"><span>04</span><h4 data-i18n="about.v4">Launch</h4><p data-i18n="about.v4p">Platforms, competitions and networks to go pro.</p></div>
+        </div>
+      </div>
+
+      <div class="journey reveal">
+        <div class="journey-head">
+          <h3 data-i18n="journey.title">Our Journey So Far</h3>
+          <p data-i18n="journey.subtitle">Tap a year to see how the foundation grew.</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+        <div class="tl-detail" id="tlDetail"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section section-alt" id="categories">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag" data-i18n="cats.tag">What we support</span>
+        <h2 data-i18n="cats.title">Program Categories</h2>
+        <p data-i18n="cats.subtitle">Five pillars of grassroots talent we nurture every single year.</p>
+      </div>
+      <div class="cats-grid">
+        <article class="cat-card" data-cat="sports">
+          <span class="cat-icon">&#9917;</span>
+          <h3 data-i18n="cats.sports">Sports</h3>
+          <p data-i18n="cats.sportsP">Football, athletics, boxing, basketball &amp; more. Equipment, coaching, nutrition and competition exposure.</p>
+          <button class="cat-toggle" type="button"><span data-i18n="cats.toggle">What we provide</span> <span class="cat-plus">+</span></button>
+          <div class="cat-detail">
+            <ul>
+              <li data-i18n="cat.sports1">Training equipment &amp; kits</li>
+              <li data-i18n="cat.sports2">Certified coaches &amp; fitness plans</li>
+              <li data-i18n="cat.sports3">Nutrition &amp; medical support</li>
+              <li data-i18n="cat.sports4">Tournament &amp; trial placement</li>
+            </ul>
+          </div>
+        </article>
+        <article class="cat-card" data-cat="arts">
+          <span class="cat-icon">&#127912;</span>
+          <h3 data-i18n="cats.arts">Arts</h3>
+          <p data-i18n="cats.artsP">Music, painting, dance, drama and writing &mdash; materials, studio time, exhibition and performance stages.</p>
+          <button class="cat-toggle" type="button"><span data-i18n="cats.toggle">What we provide</span> <span class="cat-plus">+</span></button>
+          <div class="cat-detail">
+            <ul>
+              <li data-i18n="cat.arts1">Materials, instruments &amp; studio time</li>
+              <li data-i18n="cat.arts2">Artist &amp; industry mentorships</li>
+              <li data-i18n="cat.arts3">Exhibitions &amp; stage showcases</li>
+              <li data-i18n="cat.arts4">Portfolio &amp; audition preparation</li>
+            </ul>
+          </div>
+        </article>
+        <article class="cat-card" data-cat="tech">
+          <span class="cat-icon">&#128187;</span>
+          <h3 data-i18n="cats.tech">Technology</h3>
+          <p data-i18n="cats.techP">Coding bootcamps, robotics, digital skills, devices and mentorship from industry professionals.</p>
+          <button class="cat-toggle" type="button"><span data-i18n="cats.toggle">What we provide</span> <span class="cat-plus">+</span></button>
+          <div class="cat-detail">
+            <ul>
+              <li data-i18n="cat.tech1">Laptops, devices &amp; data bundles</li>
+              <li data-i18n="cat.tech2">Full-stack &amp; robotics bootcamps</li>
+              <li data-i18n="cat.tech3">1-on-1 industry mentorship</li>
+              <li data-i18n="cat.tech4">Internship &amp; project placement</li>
+            </ul>
+          </div>
+        </article>
+        <article class="cat-card" data-cat="business">
+          <span class="cat-icon">&#128200;</span>
+          <h3 data-i18n="cats.business">Entrepreneurship</h3>
+          <p data-i18n="cats.businessP">Seed funding, business mentorship and market access for young founders and small traders.</p>
+          <button class="cat-toggle" type="button"><span data-i18n="cats.toggle">What we provide</span> <span class="cat-plus">+</span></button>
+          <div class="cat-detail">
+            <ul>
+              <li data-i18n="cat.business1">Seed grants &amp; micro-loans</li>
+              <li data-i18n="cat.business2">Business planning workshops</li>
+              <li data-i18n="cat.business3">Mentor pairing with founders</li>
+              <li data-i18n="cat.business4">Marketplace &amp; vendor access</li>
+            </ul>
+          </div>
+        </article>
+        <article class="cat-card" data-cat="works">
+          <span class="cat-icon">&#128736;&#65039;</span>
+          <h3 data-i18n="cats.works">Physical Works</h3>
+          <p data-i18n="cats.worksP">Vocational trades &mdash; carpentry, masonry, welding, tailoring &mdash; with tools and apprenticeship support.</p>
+          <button class="cat-toggle" type="button"><span data-i18n="cats.toggle">What we provide</span> <span class="cat-plus">+</span></button>
+          <div class="cat-detail">
+            <ul>
+              <li data-i18n="cat.works1">Professional toolkits &amp; safety gear</li>
+              <li data-i18n="cat.works2">Certified apprenticeship placements</li>
+              <li data-i18n="cat.works3">Trade certifications</li>
+              <li data-i18n="cat.works4">First-contract job placement</li>
+            </ul>
+          </div>
+        </article>
+        <article class="cat-card cat-card-more" data-cat="more">
+          <span class="cat-icon">&#127793;</span>
+          <h3 data-i18n="cats.more">&amp; More</h3>
+          <p data-i18n="cats.moreP">Any genuine talent deserves a chance. If you have a passion, we have a pathway.</p>
+          <button class="cat-toggle" type="button"><span data-i18n="cats.apply">How to apply</span> <span class="cat-plus">+</span></button>
+          <div class="cat-detail">
+            <ul>
+              <li data-i18n="cat.more1">Send us a short video of your talent</li>
+              <li data-i18n="cat.more2">We review within 7 days</li>
+              <li data-i18n="cat.more3">Shortlisted talents get a trial plan</li>
+              <li data-i18n="cat.more4">No talent is too unusual &mdash; apply now</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPONSORED TALENTS ============ -->
+  <section class="section" id="talents">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag" data-i18n="talents.tag">Interactive sponsorship</span>
+        <h2 data-i18n="talents.title">Featured Talent Roster</h2>
+        <p data-i18n="talents.subtitle">These young talents are ready for a benefactor. Choose one to support &mdash; every contribution counts.</p>
+      </div>
+
+      <div class="talent-filter">
+        <button class="filter-btn active" data-filter="all" data-i18n="talents.filterAll">All</button>
+        <button class="filter-btn" data-filter="sports" data-i18n="talents.filterSports">Sports</button>
+        <button class="filter-btn" data-filter="arts" data-i18n="talents.filterArts">Arts</button>
+        <button class="filter-btn" data-filter="tech" data-i18n="talents.filterTech">Technology</button>
+        <button class="filter-btn" data-filter="business" data-i18n="talents.filterBusiness">Entrepreneurship</button>
+        <button class="filter-btn" data-filter="works" data-i18n="talents.filterWorks">Physical Works</button>
+      </div>
+
+      <div class="talent-search">
+        <span class="search-icon">&#128269;</span>
+        <input type="search" id="talentSearch" data-i18n-placeholder="talents.searchPlaceholder" placeholder="Search talents by name, skill or story..." />
+      </div>
+
+      <div class="talent-grid" id="talentGrid">
+        <!-- Talent cards injected by script.js -->
+      </div>
+
+      <div class="sponsor-cta" id="sponsor">
+        <div class="sponsor-box">
+          <h3 data-i18n="sponsor.title">Become a Benefactor</h3>
+          <p data-i18n="sponsor.subtitle">Choose an amount to pledge toward the talent of your choice. Your donation goes 100% to their training, tools and growth.</p>
+          <form id="sponsorForm" class="sponsor-form" novalidate>
+            <input type="text" id="spName" data-i18n-placeholder="sponsor.name" placeholder="Your full name" required />
+            <input type="email" id="spEmail" data-i18n-placeholder="sponsor.email" placeholder="Your email" required />
+            <select id="spTalent" required>
+              <option value="" disabled selected data-i18n="sponsor.select">Select a talent to sponsor</option>
+            </select>
+            <div class="amounts">
+              <button type="button" class="amount-btn" data-amount="25">$25</button>
+              <button type="button" class="amount-btn" data-amount="50">$50</button>
+              <button type="button" class="amount-btn" data-amount="100">$100</button>
+              <button type="button" class="amount-btn" data-amount="250">$250</button>
+              <input type="number" id="spCustom" class="custom-amount" data-i18n-placeholder="sponsor.custom" placeholder="Custom $" min="1" />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="sponsor.submit">Sponsor Now</button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+
+        <div class="recent-sponsors" id="recentSponsors">
+          <h3 class="recent-title">&#128240; <span data-i18n="recent.title">Live Benefactor Feed</span></h3>
+          <ul class="recent-list" id="recentList"></ul>
+          <p class="recent-empty" id="recentEmpty" data-i18n="recent.empty">No pledges yet &mdash; be the first to sponsor a talent!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NON-SPONSORED SERVICES ============ -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag" data-i18n="services.tag">No cost to the talent</span>
+        <h2 data-i18n="services.title">Non-Sponsored Services</h2>
+        <p data-i18n="services.subtitle">Free support available to every grassroots talent, regardless of sponsorship status.</p>
+      </div>
+      <div class="services-tabs">
+        <button class="service-tab active" data-tab="talents" data-i18n="services.tabTalents">For Talents</button>
+        <button class="service-tab" data-tab="benefactors" data-i18n="services.tabBenefactors">For Benefactors</button>
+        <button class="service-tab" data-tab="partners" data-i18n="services.tabPartners">For Partners</button>
+      </div>
+
+      <div class="services-panel active" data-panel="talents">
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-icon">&#128172;</span>
+            <h3 data-i18n="s.mentor">Mentorship &amp; Guidance</h3>
+            <p data-i18n="s.mentorP">One-on-one coaching from professionals and alumni in your field, free of charge.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#127891;</span>
+            <h3 data-i18n="s.workshop">Skills Workshops</h3>
+            <p data-i18n="s.workshopP">Free monthly workshops on discipline, finance, goal-setting and career planning.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#129309;</span>
+            <h3 data-i18n="s.network">Community Network</h3>
+            <p data-i18n="s.networkP">Join a growing community of talents, mentors and partners who open doors for each other.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128203;</span>
+            <h3 data-i18n="s.exposure">Exposure Platforms</h3>
+            <p data-i18n="s.exposureP">Showcases, exhibitions and trials where talents can be discovered by the wider world.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128218;</span>
+            <h3 data-i18n="s.scholar">Scholarship Guidance</h3>
+            <p data-i18n="s.scholarP">Application support and referrals for academic and vocational scholarships.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128175;</span>
+            <h3 data-i18n="s.wellbeing">Mental Wellbeing</h3>
+            <p data-i18n="s.wellbeingP">Access to counselling and wellbeing sessions to keep young minds strong and focused.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="services-panel" data-panel="benefactors">
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-icon">&#128202;</span>
+            <h3 data-i18n="s.reports">Impact Reports</h3>
+            <p data-i18n="s.reportsP">Quarterly reports showing exactly how your funding moved the needle for each talent.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#127909;</span>
+            <h3 data-i18n="s.updates">Live Progress Updates</h3>
+            <p data-i18n="s.updatesP">Photos, videos and milestone updates from the talent you sponsor, straight to your inbox.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128205;</span>
+            <h3 data-i18n="s.visits">Community Site Visits</h3>
+            <p data-i18n="s.visitsP">Join scheduled visits to meet the talents and see your impact on the ground.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128230;</span>
+            <h3 data-i18n="s.receipts">Tax-Ready Receipts</h3>
+            <p data-i18n="s.receiptsP">Every pledge comes with a verified donation receipt for your records and filings.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#127942;</span>
+            <h3 data-i18n="s.recognition">Recognition</h3>
+            <p data-i18n="s.recognitionP">Benefactors are celebrated on our wall of support and at annual award events.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128272;</span>
+            <h3 data-i18n="s.naming">Naming Opportunities</h3>
+            <p data-i18n="s.namingP">Name a scholarship, a toolset or a studio wing with a larger commitment.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="services-panel" data-panel="partners">
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-icon">&#127760;</span>
+            <h3 data-i18n="s.referral">Talent Referral Pipeline</h3>
+            <p data-i18n="s.referralP">Refer promising young people and we handle assessment, onboarding and support.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#129517;</span>
+            <h3 data-i18n="s.cobrand">Co-Branded Programs</h3>
+            <p data-i18n="s.cobrandP">Partner with us to launch a joint academy, bootcamp or competition under both brands.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128188;</span>
+            <h3 data-i18n="s.corpVol">Corporate Volunteering</h3>
+            <p data-i18n="s.corpVolP">Bring your team for skills days, career talks and hands-on mentorship sessions.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128200;</span>
+            <h3 data-i18n="s.csr">CSR Reporting</h3>
+            <p data-i18n="s.csrP">Structured reporting and evidence packs that support your corporate social responsibility goals.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#127866;</span>
+            <h3 data-i18n="s.events">Sponsor Events</h3>
+            <p data-i18n="s.eventsP">Seasonal showcases and galas where partners meet talents, mentors and changemakers.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">&#128181;</span>
+            <h3 data-i18n="s.grants">Grant Partnerships</h3>
+            <p data-i18n="s.grantsP">Fund targeted programs &mdash; e.g. girls in tech, vocational youth &mdash; with full transparency.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACT ============ -->
+  <section class="section" id="impact">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag" data-i18n="impact.tag">Our footprint</span>
+        <h2 data-i18n="impact.title">Impact &amp; Stories</h2>
+        <p data-i18n="impact.subtitle">Real grassroots talent, real transformation.</p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-nums">
+          <div class="impact-stat"><strong data-count="240">0</strong><span data-i18n="impact.stat1">Talents enrolled</span></div>
+          <div class="impact-stat"><strong data-count="86">0</strong><span data-i18n="impact.stat2">Sponsored this year</span></div>
+          <div class="impact-stat"><strong data-count="32">0</strong><span data-i18n="impact.stat3">Communities reached</span></div>
+          <div class="impact-stat"><strong data-count="18">0</strong><span data-i18n="impact.stat4">National champions</span></div>
+        </div>
+        <div class="impact-stories">
+          <figure class="story">
+            <blockquote data-i18n="impact.q1">&ldquo;Before Benefactor, my painting brushes were old and broken. Now I have a studio scholarship and exhibited at my first city gallery.&rdquo;</blockquote>
+            <figcaption><strong>Adaeze O.</strong> &mdash; <span data-i18n="impact.c1">Arts, Cohort 3</span></figcaption>
+          </figure>
+          <figure class="story">
+            <blockquote data-i18n="impact.q2">&ldquo;They didn&rsquo;t just fund my training &mdash; they gave me a coach, a plan and a community that believed in me.&rdquo;</blockquote>
+            <figcaption><strong>Musa K.</strong> &mdash; <span data-i18n="impact.c2">Sports, Cohort 2</span></figcaption>
+          </figure>
+          <figure class="story">
+            <blockquote data-i18n="impact.q3">&ldquo;With their seed funding and mentorship, my tailoring workshop now employs three other young people.&rdquo;</blockquote>
+            <figcaption><strong>Fatima S.</strong> &mdash; <span data-i18n="impact.c3">Entrepreneurship, Cohort 1</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="milestones reveal">
+        <div class="milestones-head">
+          <h3 data-i18n="milestones.title">Foundation Milestones</h3>
+          <p data-i18n="milestones.subtitle">Drag the slider or use the arrows to travel through our journey.</p>
+        </div>
+        <div class="milestone-range">
+          <button class="m-range-btn" id="mPrev" aria-label="Previous milestone">&#8592;</button>
+          <input type="range" id="milestoneSlider" min="0" max="5" value="0" step="1" />
+          <button class="m-range-btn" id="mNext" aria-label="Next milestone">&#8594;</button>
+        </div>
+        <div class="milestone-detail" id="milestoneDetail"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="tag" data-i18n="contact.tag">Get in touch</span>
+          <h2 data-i18n="contact.title">Let&rsquo;s empower the next generation together</h2>
+          <p data-i18n="contact.subtitle">Whether you want to sponsor, volunteer, partner or refer a talent, we want to hear from you.</p>
+          <ul class="contact-list">
+            <li><span>&#128231;</span> <span data-i18n="contact.email">hello@benefactorfoundation.org</span></li>
+            <li><span>&#128241;</span> <span data-i18n="contact.phone">+(255) 657200596</span></li>
+            <li><span>&#128205;</span> <span data-i18n="contact.address">12 Hope Street, Community District</span></li>
+          </ul>
+          <div class="socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="X">X</a>
+            <a href="#" aria-label="Instagram">Ig</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <input type="text" id="cName" data-i18n-placeholder="contact.name" placeholder="Your name" required />
+          <input type="email" id="cEmail" data-i18n-placeholder="contact.emailPh" placeholder="Your email" required />
+          <select id="cInterest" required>
+            <option value="" disabled selected data-i18n="contact.interest">I&rsquo;m interested in...</option>
+            <option data-i18n="contact.i1">Sponsoring a talent</option>
+            <option data-i18n="contact.i2">Volunteering / Mentoring</option>
+            <option data-i18n="contact.i3">Partnering with the foundation</option>
+            <option data-i18n="contact.i4">Referring a talent</option>
+          </select>
+          <div class="field-wrap">
+            <textarea id="cMsg" rows="4" maxlength="500" data-i18n-placeholder="contact.msg" placeholder="Tell us more..." required></textarea>
+            <span class="char-count" id="charCount">0 / 500</span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.submit">Send Message</button>
+          <p class="form-note" id="contactNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p id="footerText">&copy; <span id="year"></span> Benefactor Foundation. Empowering the coming generation of grassroots talents.</p>
+      <p data-i18n="footer.tagline">Built with dedication for the next generation.</p>
+    </div>
+  </footer>
+
+  <!-- ============ SPONSOR MODAL ============ -->
+  <div class="modal" id="sponsorModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <div class="modal-icon">&#127881;</div>
+      <h3 id="modalTitle">Thank you, <span id="modalName">Benefactor</span>!</h3>
+      <p id="modalBody"></p>
+      <p class="modal-note" data-i18n="modal.note">This is a demonstration portfolio site. No real payment was processed.</p>
+      <button class="btn btn-primary btn-block" id="modalOk" data-i18n="modal.ok">Done</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
